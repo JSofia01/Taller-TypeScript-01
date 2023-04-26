@@ -1,6 +1,7 @@
 import { dataSeries } from './dataSeries.js';
 var seriesTbody = document.getElementById('series');
 renderSeriesInTable(dataSeries);
+renderSeasonsAverage(dataSeries);
 function renderSeriesInTable(series) {
     series.forEach(function (s) {
         var trElement = document.createElement("tr");
@@ -8,3 +9,16 @@ function renderSeriesInTable(series) {
         seriesTbody.appendChild(trElement);
     });
 }
+function renderSeasonsAverage(series) {
+    var tSeasons = 0;
+    var tSeries = series.length;
+    series.forEach(function (s) {
+        tSeasons += s.seasons;
+    });
+    var answer = tSeasons / tSeries;
+    var answer2 = answer.toString();
+    var trElement = document.createElement("tr");
+    trElement.innerHTML = 'Seasons average: ' + answer2;
+    seriesTbody.appendChild(trElement);
+}
+;
