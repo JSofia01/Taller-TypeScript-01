@@ -26,7 +26,7 @@ function renderSeasonsAverage (series: Serie[]): void {
 
     let answer = tSeasons/tSeries;
     let answer2 = answer.toString();
-    let trElement = document.createElement("tr");
+    let trElement = document.createElement("p");
     trElement.innerHTML = 'Seasons average: ' + answer2;
     seriesTbody.appendChild(trElement);
 };

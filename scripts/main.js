@@ -17,7 +17,7 @@ function renderSeasonsAverage(series) {
     });
     var answer = tSeasons / tSeries;
     var answer2 = answer.toString();
-    var trElement = document.createElement("tr");
+    var trElement = document.createElement("p");
     trElement.innerHTML = 'Seasons average: ' + answer2;
     seriesTbody.appendChild(trElement);
 }
